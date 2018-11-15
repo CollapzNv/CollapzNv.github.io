@@ -150,8 +150,9 @@ $(document).ready(function($) {
 
 }(jQuery)); // End "use strict"
 
-$('.sb-toggle-submenu').off('click',function(){alert('it does\'s fxxking work');}) // Stop submenu toggle from closing Slidebars.
-	.on('mouseenter', function() {
+
+$('.sb-toggle-submenu').off('click')// Stop submenu toggle from closing Slidebars.
+	.on('click', function() {
 		$submenu = $(this).parent().children('.sb-submenu');
 		$(this).add($submenu).toggleClass('sb-submenu-active'); // Toggle active class.
 
