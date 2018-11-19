@@ -81,7 +81,7 @@ CollapzNv(http://3welkin3.cn)
                     
                         <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
                     
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                        <li><a href="/" target="_BLANK" class="animsition-link">BBB</a></li>
                     
                 </ul>
             </li>
@@ -163,13 +163,13 @@ CollapzNv(http://3welkin3.cn)
       <!-- ============================ Hero Image =========================== -->
 
 <section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+    <div class="container-fluid element-img" style="background: url(/img/3.jpg) no-repeat center center fixed;background-size: cover">
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
                 <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
                     <div>
                         
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION...</h2>
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION</h2>
                         <p></p>
                         
                         <h2></h2>
@@ -194,6 +194,37 @@ CollapzNv(http://3welkin3.cn)
 
 <section id="intro">
     <div class="container">
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/post/pwd/">pwd</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2018-11-19T05:27:39.000Z" itemprop="datePublished">
+          2018-11-19
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        不知道hexo的无限极分类是啥子样的
+
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/post/pwd/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2 opening-statement">
@@ -266,7 +297,7 @@ Quick StartCreate a new p
 <section id="statement">
     <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
         <div class="row">
-            <p></p>
+            <p>人，总要有个归宿。</p>
         </div>
     </div>
 </section>
@@ -324,6 +355,23 @@ Quick StartCreate a new p
 <script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
 <script src="/js/scripts.js"></script><!-- Theme scripts -->
 
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
 
 
@@ -756,5 +804,5 @@ Quick StartCreate a new p
 
       
       </div>      
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body>
 </html>

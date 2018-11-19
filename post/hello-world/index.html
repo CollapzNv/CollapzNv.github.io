@@ -81,7 +81,7 @@ CollapzNv(http://3welkin3.cn)
                     
                         <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
                     
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                        <li><a href="/" target="_BLANK" class="animsition-link">BBB</a></li>
                     
                 </ul>
             </li>
@@ -303,6 +303,23 @@ CollapzNv(http://3welkin3.cn)
 <script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
 <script src="/js/scripts.js"></script><!-- Theme scripts -->
 
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
 
 
@@ -735,5 +752,5 @@ CollapzNv(http://3welkin3.cn)
 
       
       </div>      
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"position":"right","width":100,"height":200},"mobile":{"show":true}});</script></body>
 </html>
