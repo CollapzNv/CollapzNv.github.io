@@ -14,7 +14,7 @@ CollapzNv(http://3welkin3.cn)
 <!--<![endif]-->
 
 <head>
-  <title>Category: 分类3 | 彳亍</title>
+  <title>HEXO搭建 | 彳亍</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -59,7 +59,7 @@ CollapzNv(http://3welkin3.cn)
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -176,38 +176,96 @@ CollapzNv(http://3welkin3.cn)
 
 
       
-
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/post/ac/">categories</a></h4>
-                            
-                            <p><time datetime="2018-11-19T10:01:19.000Z"><a href="/post/ac/">2018-11-19</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2018-11-15T10:00:00.000Z" itemprop="datePublished">
+          2018-11-15
+      </time>
+    
+</span>
+                <h1>HEXO搭建</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>用hexo搭建网站省时省力，不过我在主题上二次修改倒是费了好多时间，建议使用成熟的next主题。</p>
+<p>安装git<br>安装node.js(hexo依赖)<br>安装hexo<br><code>hexo init</code><br>在hexo中的_config.yml中设置deploy，repository可以用http或者ssh推仓库(配置项冒号后要有空格)<br><code>ssh -T git@github.com //ssh登录验证，http忽略</code></p>
+<p><code>npm install hexo-deployer-git --save  //安装部署插件</code><br><code>hexo d &amp;&amp; hexo g &amp;&amp; hexo s //开启预览访问端口 默认4000</code><br>配置Github Pages</p>
+<p>之后修改后需要部署到Pages上<br><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code> </p>
+<p><em>关于自定义域名：域名解析类型为CNAME；根目录source文件夹下创建CNAME.txt，写入自定义域名，保存后去掉文件后缀</em></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>人，总要有个归宿。</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/post/pwd/" style="float: left;">
+        ← pwd
+    </a>
+    
+    
+    <a class="pull-right" href="/post/An-artical/">
+        An artical →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
