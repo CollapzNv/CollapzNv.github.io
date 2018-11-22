@@ -191,9 +191,14 @@ CollapzNv(http://3welkin3.cn)
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<p>用hexo搭建网站省时省力，不过我在主题上二次修改倒是费了好多时间，建议使用成熟的next主题。</p>
-<p>安装git<br>安装node.js(hexo依赖)<br>安装hexo<br><code>hexo init</code><br>在hexo中的_config.yml中设置deploy，repository可以用http或者ssh推仓库(配置项冒号后要有空格)<br><code>ssh -T git@github.com //ssh登录验证，http忽略</code></p>
-<p><code>npm install hexo-deployer-git --save  //安装部署插件</code><br><code>hexo d &amp;&amp; hexo g &amp;&amp; hexo s //开启预览访问端口 默认4000</code><br>配置Github Pages</p>
-<p>之后修改后需要部署到Pages上<br><code>hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</code> </p>
+<p>安装git<br>安装node.js(hexo依赖)<br>安装hexo</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<p>在hexo中的_config.yml中设置deploy，repository可以用http或者ssh推仓库(配置项冒号后要有空格)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save  //安装部署插件</span><br><span class="line">$ hexo d &amp;&amp; hexo g &amp;&amp; hexo s //开启预览访问端口 默认4000</span><br></pre></td></tr></table></figure>
+<p>命令可以用’’&amp;&amp;”连写</p>
+<p>配置Github Pages</p>
+<p>之后修改后需要部署到Pages上</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo cl &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 <p><em>关于自定义域名：域名解析类型为CNAME；根目录source文件夹下创建CNAME.txt，写入自定义域名，保存后去掉文件后缀</em></p>
 
             <div class="clearfix"></div>
