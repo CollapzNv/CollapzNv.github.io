@@ -27,7 +27,7 @@ CollapzNv(http://3welkin3.cn)
     <!-- Favicon, (keep icon in root folder) -->
     <link rel="Shortcut Icon" href="/img/favicon.jpg" type="image/jpg">
 
-    <link rel="alternate" href="http://3welkin3.cn" title="彳亍" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="彳亍" type="application/atom+xml">
     <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
 
    
@@ -55,6 +55,8 @@ CollapzNv(http://3welkin3.cn)
     <![endif]-->
 
   
+  
+  <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="atom.xml">
   
   
 
@@ -87,7 +89,11 @@ CollapzNv(http://3welkin3.cn)
 				    
 				    <li><a href="/categories/CODE/" class="animsition-link">CODE<small>(1)</small></a></li>
 				    
-				    <li><a href="/categories/OTHERS/" class="animsition-link">OTHERS<small>(2)</small></a></li>
+				    <li><a href="/categories/OTHER/" class="animsition-link">OTHER<small>(1)</small></a></li>
+				    
+				    <li><a href="/categories/OTHERS/" class="animsition-link">OTHERS<small>(3)</small></a></li>
+				    
+				    <li><a href="/categories/WORK/" class="animsition-link">WORK<small>(1)</small></a></li>
 				    
 				</ul>
         	</li>
@@ -175,12 +181,18 @@ CollapzNv(http://3welkin3.cn)
           2019-05-16
       </time>
     
+    
+    | 
+    <a href="/tags/BITCOIN/">BITCOIN</a>
+    
+    
 </span>
                 <h1>门罗币小记</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
       		<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近比特币热度又升高了，有些人通过年底屯币实现了财务自由。当然这些事情听听就好了，不过没接触过的我有些好奇，刚好还有空闲的机子，那么就来捣鼓一下<del>（测试一下性能）</del>吧。</p>
+<a id="more"></a>
 <p>选币</p>
 <p>首先选择需要挖的币种，单个价值太高的币种不要选，因为取出所耗费的资源相对较大，周期也较长。这里我选择了算法GPU和CPU相同的（<strong>BitMonero</strong>）门罗币，对新手友好，且它也比较热门。</p>
 <p><strong>长的也比较可爱。</strong></p>
@@ -222,9 +234,9 @@ CollapzNv(http://3welkin3.cn)
 </li>
 </ol>
 <h5 id="WINDOWS-这里以WIN7为例"><a href="#WINDOWS-这里以WIN7为例" class="headerlink" title="WINDOWS : 这里以WIN7为例"></a>WINDOWS : 这里以WIN7为例</h5><p>xmr-stak的下载地址：<a href="https://github.com/fireice-uk/xmr-stak/releases" target="_blank" rel="noopener">https://github.com/fireice-uk/xmr-stak/releases</a></p>
-<p>作者只开发了64位，选择xmr-stak-win64的7z或zip下载至本地，解压。文件夹只有一层，配置文件和linux上的相同，修改后启动xxmr-stak.exe。</p>
+<p>作者只开发了64位，选择xmr-stak-win64的7z或zip下载至本地，解压。文件夹只有一层，配置文件和linux上的相同，修改后启动xmr-stak.exe。</p>
 <hr>
-<h3 id="挖矿情况"><a href="#挖矿情况" class="headerlink" title="挖矿情况"></a>挖矿情况</h3><p><strong>…网管，上机！</strong></p>
+<h3 id="挖矿情况"><a href="#挖矿情况" class="headerlink" title="挖矿情况"></a>挖矿情况</h3><p><strong>网管，上机！</strong></p>
 <p><img src="/post/门罗币小记/惨不忍睹.jpg" alt="vps1"></p>
 <p>不得不说4核8G的机子真贵，40$一个月（其实也不贵）。不过反正10$薅来的，一个月后dump掉，还能用1核1G的跑机场两个月；至于4000G的流量，当然是用来爬东西了。这么一想瞬间开心了起来~</p>
 <p>挖矿详细结果在这里：<a href="https://xmr.nanopool.org/" target="_blank" rel="noopener">https://xmr.nanopool.org</a></p>
@@ -239,7 +251,7 @@ CollapzNv(http://3welkin3.cn)
 <p>这里我主要看6小时平均算力，显示40.8H/s，和挖矿程序上显示的不一致是因为我运行的时间不长，所以网站里显示偏低。</p>
 <p>既然感觉有点低那就把windows的也打开哈哈哈。</p>
 <p><img src="/post/门罗币小记/惨不忍睹3.jpg" alt="process"></p>
-<p>牙膏厂的4590挖门罗币差不多提供60的算力，不错了，毕竟CPU并行速度和GPU速度没法比，当然了不是一慨而论的。</p>
+<p>牙膏厂的7500挖门罗币差不多提供60的算力，不错了，毕竟CPU并行速度和GPU速度没法比，当然了不是一慨而论的。</p>
 <p>一打开windows挖矿程序CPU立马飙到100%，于是我看了看vps的情况：</p>
 <p><img src="/post/门罗币小记/vps.png" alt="vps3"></p>
 <p>嗯，400%，还行，估计再过几个小时管理员就要发给我邮件并封禁我的vps了 : ）</p>
@@ -252,6 +264,10 @@ CollapzNv(http://3welkin3.cn)
             <hr class="nogutter">
         </div>
         <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/post/使用ASF/" style="float: left;">
+        ← 使用ASF云挂卡
+    </a>
     
     
     <a class="pull-right" href="/post/IF&ELSE的处理方式/">
@@ -364,7 +380,7 @@ new Valine({
                     
                     
                     
-                        <li><a href="http://3welkin3.cn" title="Rss" target="_blank"><i class="icon-feed"></i></a>&nbsp;</li>
+                        <li><a href="/atom.xml" title="Rss" target="_blank"><i class="icon-feed"></i></a>&nbsp;</li>
                         
                 </ul>
             </div>

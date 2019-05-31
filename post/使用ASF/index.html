@@ -14,7 +14,7 @@ CollapzNv(http://3welkin3.cn)
 <!--<![endif]-->
 
 <head>
-  <title>Category: OTHERS | 彳亍</title>
+  <title>使用ASF云挂卡 | 彳亍</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -64,7 +64,7 @@ CollapzNv(http://3welkin3.cn)
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -172,56 +172,276 @@ CollapzNv(http://3welkin3.cn)
 
 
       
-
-
-
-<section id="services">
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/post/使用ASF/">使用ASF云挂卡</a></h4>
-                            
-                            <p><time datetime="2019-05-21T03:30:39.000Z"><a href="/post/使用ASF/">2019-05-21</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/post/门罗币小记/">门罗币小记</a></h4>
-                            
-                            <p><time datetime="2019-05-16T08:38:30.000Z"><a href="/post/门罗币小记/">2019-05-16</a></time></p>
-                        </div>
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/post/Yesterday/">Yesterday</a></h4>
-                            
-                            <p><time datetime="2018-11-19T05:27:39.000Z"><a href="/post/Yesterday/">2018-11-19</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2019-05-21T03:30:39.000Z" itemprop="datePublished">
+          2019-05-21
+      </time>
+    
+    
+    | 
+    <a href="/tags/STEAM/">STEAM</a>
+    
+    
+</span>
+                <h1>使用ASF云挂卡</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>继Idle Master的作者不再更新后，GFW也升级了，魔改版的能用但时间长，且只有挂卡功能。所以了解了一下ASF，把手上的卡挂掉了。<del>然后堆仓库</del></p>
+<a id="more"></a>
+<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><p><a href="#dotnet">.Net Core 2.0</a></p>
+<p><a href="#asf">ASF</a></p>
+<p><a href="#ascf">ASCF（国内vps）</a></p>
+<p><a href="#tmux">Tmux</a></p>
+<p><a href="#run">运行</a></p>
+<p><a href="#chatcontrol">组内控制</a></p>
+<p><a href="#appendix">附录</a></p>
+<hr>
+<h4 id="安装-Net-Core-2-0"><a href="#安装-Net-Core-2-0" class="headerlink" title="安装.Net Core 2.0"></a><span id="dotnet">安装.Net Core 2.0</span></h4><p>因asf由c#编写，需.Net Core 2.0环境。</p>
+<p>微软官方安装文档：<a href="https://www.microsoft.com/net/learn/get-started/linux/centos" target="_blank" rel="noopener">https://www.microsoft.com/net/learn/get-started/linux/centos</a></p>
+<p>添加feed</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://packages.microsoft.com/keys/microsoft.asc</span><br></pre></td></tr></table></figure>
+<p>添加安装源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh -c <span class="string">'echo -e "[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" &gt; /etc/yum.repos.d/dotnetdev.repo'</span></span><br></pre></td></tr></table></figure>
+<p>安装.Net Core 2.0</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y update</span><br><span class="line">yum -y install libunwind libicu</span><br><span class="line">yum -y install dotnet-sdk-2.0.0</span><br></pre></td></tr></table></figure>
+<p>安装后完成检查</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dotnet --version</span><br></pre></td></tr></table></figure>
+<hr>
+<h4 id="安装ASF"><a href="#安装ASF" class="headerlink" title="安装ASF"></a><span id="asf">安装ASF</span></h4><p>wget一个stable的release/ASF-linux-x64.zip</p>
+<p>地址：<a href="https://github.com/JustArchi/ArchiSteamFarm" target="_blank" rel="noopener">https://github.com/JustArchi/ArchiSteamFarm</a></p>
+<p>解压即可，运行需要执行权限。</p>
+<p>Bot配置文件地址：<a href="https://justarchinet.github.io/ASF-WebConfigGenerator/#/bot" target="_blank" rel="noopener">https://justarchinet.github.io/ASF-WebConfigGenerator/#/bot</a>（要勾上enabled）</p>
+<p>配置文件为json，上传至asf目录的config文件夹下，可上传多个。</p>
+<hr>
+<h4 id="安装ASCF（国内vps）"><a href="#安装ASCF（国内vps）" class="headerlink" title="安装ASCF（国内vps）"></a><span id="ascf">安装ASCF（国内vps）</span></h4><p>地址：<a href="https://github.com/zyfworks/AnotherSteamCommunityFix/releases" target="_blank" rel="noopener">https://github.com/zyfworks/AnotherSteamCommunityFix</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install wget &amp;&amp; wget release地址</span><br></pre></td></tr></table></figure>
+<p>同样解压后即可，需要执行权限。</p>
+<hr>
+<h4 id="安装Tmux"><a href="#安装Tmux" class="headerlink" title="安装Tmux"></a><span id="tmux">安装Tmux</span></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install tmux</span><br></pre></td></tr></table></figure>
+<p>创建新tmux窗口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux new -s asf</span><br></pre></td></tr></table></figure>
+<p>查看会话列表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux list-sessions</span><br></pre></td></tr></table></figure>
+<p>进入窗口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux a -t asf</span><br></pre></td></tr></table></figure>
+<p>以下为进入窗口后的操作：</p>
+<p><code>窗口切换：ctrl+b，松开后按方向键</code></p>
+<p><code>退出窗口后台运行：ctrl+b，松开后按d</code></p>
+<p><code>显示窗口数字：ctrl+b,松开后按q</code> </p>
+<p><code>移动道特定窗口：ctrl+b,松开后按窗口编号</code></p>
+<p><code>关闭窗口：ctrl+d，或者exit，logout</code></p>
+<hr>
+<h4 id="运行"><a href="#运行" class="headerlink" title="运行"></a><span id="run">运行</span></h4><blockquote>
+<p><strong>国内vps需先运行ASCF</strong>：<code>./ascf</code></p>
+<p>运行后按下ctrl+b，松开后按下%，垂直分割一个窗口；或按下”水平分割一个窗口。</p>
+</blockquote>
+<p>运行ASF</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ArchiSteamFarm</span><br></pre></td></tr></table></figure>
+<p>ASF默认执行所有账号，所以config目录文件下的配置项全会执行，如有手机验证码会一一提示输入。</p>
+<p>卡片一般挂满两小时后开始陆续掉落，时间与实际相比相差不多。</p>
+<hr>
+<h4 id="组内控制"><a href="#组内控制" class="headerlink" title="组内控制"></a><span id="control">组内控制</span></h4><p>组内控制即是在steam组内通过聊天可对ASF实现远程控制。</p>
+<ol>
+<li><p>创建Steam私人组</p>
+<p>选择一个主控账号，创建私人组。不要勾选公共选项。</p>
+</li>
+<li><p>增加命令行模式</p>
+<p>在全局配置页面中输入主账号的Steam账号ID：<a href="https://justarchinet.github.io/ASF-WebConfigGenerator/#/asf" target="_blank" rel="noopener">全局配置页面</a>；</p>
+<p>下载配置文件得到ASF.json，上传至ASF的config文件夹中，注意该文件为全局配置，名称固定；</p>
+<p>上传后运行ASF显示会多一行”StartInteractiveConsole() Interactive console is now active, type ‘c’ in order to enter command mode. “，即在成功运行后可以按小写c进入命令行模式，每一个命令需要按一次c。</p>
+</li>
+<li><p>配置修改</p>
+<p>获取组id：给组主页的链接加上memberslistxml/?xml=1后，获得64位的组ID。</p>
+<p><a href="https://justarchinet.github.io/ASF-WebConfigGenerator/#/bot" target="_blank" rel="noopener">Bot配置页面</a>中找到SteamMasterClanID，把组ID填入；同时需要找到SteamUserPermissions选项，添加成员权限，权限共4种。</p>
+</li>
+<li><p>使用命令</p>
+<p>打开组聊天页面，在每条命令前加上”!”即可，如输入后无信息，修改对应成员的SteamUserPermissions并重启；默认是0，所以需要每个Bot配置都要添加。</p>
+</li>
+</ol>
+<hr>
+<h4 id="附录"><a href="#附录" class="headerlink" title="附录"></a><span id="appendix">附录</span></h4><ol>
+<li>常见命令</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Command</th>
+<th style="text-align:center">Access</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">addlicense <bots> <gameids></gameids></bots></td>
+<td style="text-align:center">Operator</td>
+<td style="text-align:left">为指定机器人激活给定的 <code>AppIDs</code>（Steam 网络）或 <code>SubIDs</code>（Steam 商店），仅免费游戏有效。</td>
+</tr>
+<tr>
+<td style="text-align:left">redeem <bots> <keys></keys></bots></td>
+<td style="text-align:center">Operator</td>
+<td style="text-align:left">为指定机器人激活给定的游戏序列号或钱包充值码。</td>
+</tr>
+<tr>
+<td style="text-align:left">play <bots> &lt;AppIDs,GameName&gt;</bots></td>
+<td style="text-align:center">Master</td>
+<td style="text-align:left">切换到手动挂卡——使指定机器人运行给定的 <code>AppIDs</code>，并且可选自定义 <code>GameName</code> 为游戏名称。 使用 <code>resume</code> 以返回自动挂卡模式。</td>
+</tr>
+<tr>
+<td style="text-align:left">pause <bots></bots></td>
+<td style="text-align:center">Operator</td>
+<td style="text-align:left">永久暂停指定机器人的自动挂卡模块。 ASF 在本次会话中将不会再尝试对此帐户进行挂卡，除非您手动 <code>resume</code> 或者重启 ASF。</td>
+</tr>
+<tr>
+<td style="text-align:left">resume <bots></bots></td>
+<td style="text-align:center">FamilySharing</td>
+<td style="text-align:left">恢复指定机器人的自动挂卡进程。 参见 <code>pause</code> 和 <code>play</code>。</td>
+</tr>
+<tr>
+<td style="text-align:left">start <bots></bots></td>
+<td style="text-align:center">Master</td>
+<td style="text-align:left">启动指定机器人。</td>
+</tr>
+<tr>
+<td style="text-align:left">stats</td>
+<td style="text-align:center">Owner</td>
+<td style="text-align:left">显示进程统计信息，例如托管内存用量。</td>
+</tr>
+<tr>
+<td style="text-align:left">status <bots></bots></td>
+<td style="text-align:center">FamilySharing</td>
+<td style="text-align:left">显示指定机器人的状态。</td>
+</tr>
+<tr>
+<td style="text-align:left">stop <bots></bots></td>
+<td style="text-align:center">Master</td>
+<td style="text-align:left">停止指定机器人。</td>
+</tr>
+<tr>
+<td style="text-align:left">exit</td>
+<td style="text-align:center">Owner</td>
+<td style="text-align:left">完全停止 ASF 进程。</td>
+</tr>
+</tbody>
+</table>
+<p>   <a href="https://github.com/JustArchiNET/ArchiSteamFarm/wiki/Commands" target="_blank" rel="noopener">命令详细地址</a></p>
+<ol start="2">
+<li><p>ASF_<strong>V4.0.0.4+ </strong>常用配置项</p>
+<p>{</p>
+<p>SteamLogin  //string 账号</p>
+<p>SteamPassword  //string 密码</p>
+<p>Enabled  //bool 是否启用</p>
+<p>ShutdownOnFarmingFinished //bool 挂卡完成后是否关闭程序CustomGamePlayedWhileFarming //string 自定义挂卡游戏名</p>
+<p>CustomGamePlayedWhileIdle //string 自定义挂卡结束后游戏名</p>
+<p>GamesPlayedWhileIdle [] //int steam appID，最多30个。</p>
+<p>OnlineStatus //int 在线状态  0离线 1在线 2忙碌 3离开 4打盹  5想交易 6想玩游戏 7隐身</p>
+<p>}</p>
+</li>
+</ol>
+<p><code>除最主要的挂卡功能之外，ASF还提供交易功能、自动合卡、IPC等功能。</code></p>
+<p>官方WIKI：<a href="https://github.com/JustArchi/ArchiSteamFarm/wiki" target="_blank" rel="noopener">https://github.com/JustArchi/ArchiSteamFarm/wiki</a></p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>TENDERNESS</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/post/对接海关总署有感/" style="float: left;">
+        ← 对接海关总署
+    </a>
+    
+    
+    <a class="pull-right" href="/post/门罗币小记/">
+        门罗币小记 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><div id="vcomments"></div>
+<script type="text/javascript">
+/** valine **/
+// Register AV objects to the global
+//window.AV = require('leancloud-storage');
+
+// Use import
+//import Valine from 'valine';
+// or Use require
+//const Valine = require('valine');
+
+
+new Valine({
+    el:'#vcomments',
+    appId: 'Sg0ftqblPg17wUFt5jzUiFgD-gzGzoHsz',
+    appKey: 'X1pQAkdhhq8VM3ICdyMMV2nG',
+    notify:false,
+    verify:false,
+    avatar:'monsterid', 
+    placeholder: 'write something down here :)',
+    visitor: true,
+    pageSize: 10,
+    lang: 'en',//'zh-cn'
+
+    // other config
+})
+
+
+  /**
+   * sohu changyan
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
