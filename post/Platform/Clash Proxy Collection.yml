@@ -41,13 +41,13 @@ Proxy:
     network: ws
     ws-path: /
     # v2_seattle该节点无效
-  - name: V2_SEATTLE
-    type: vmess
-    server: 35.235.87.33
-    port: "51151"
-    uuid: 0c9c89e4-0ff9-4209-ae46-c8f5111ef71a
-    alterId: "233"
-    cipher: auto
+  #- name: V2_SEATTLE
+  #  type: vmess
+  #  server: 35.235.87.33
+  #  port: "51151"
+  #  uuid: 0c9c89e4-0ff9-4209-ae46-c8f5111ef71a
+  #  alterId: "233"
+  #  cipher: auto
 Proxy Group:
   - name: MY_PROXY
     proxies:
