@@ -48,11 +48,19 @@ Proxy:
     uuid: 0c9c89e4-0ff9-4209-ae46-c8f5111ef71a
     alterId: "233"
     cipher: auto
+  - name: V2_Las Vegas
+    type: vmess
+    server: 198.98.53.164
+    port: "30725"
+    uuid: bd54b2c0-aaa2-336b-9b05-21d6b47fe598
+    alterId: "4"
+    cipher: auto
 Proxy Group:
   - name: MY_PROXY
     proxies:
       - V2_LA
       - V2_SEATTLE
+      - V2_Las Vegas
     type: select
   - name: Hijacking
     proxies:
