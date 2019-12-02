@@ -30,37 +30,48 @@ cfw-bypass:
   - <local>
 cfw-latency-timeout: 3000
 Proxy:
-  - name: V2_LA
-    type: vmess
-    server: fuchun.furrysthebest.xyz
-    port: "443"
-    uuid: 0db099f1-f7ff-4a1a-8156-3e80f5099c64
-    alterId: "233"
-    cipher: auto
-    tls: true
-    network: ws
-    ws-path: /
+  #- name: V2_LA
+    #type: vmess
+    #server: fuchun.furrysthebest.xyz
+    #port: "443"
+    #uuid: 0db099f1-f7ff-4a1a-8156-3e80f5099c64
+    #alterId: "233"
+    #cipher: auto
+    #tls: true
+    #network: ws
+    #ws-path: /
+    
     #SEATTLE 已支持桌面端CLASH
-  - name: V2_SEATTLE
+  - name: V2_SAN JOSE
     type: vmess
     server: 35.235.87.33
-    port: "30725"
-    uuid: 0c9c89e4-0ff9-4209-ae46-c8f5111ef71a
+    port: "43751"
+    uuid: f1ac8566-3cd1-4b03-af79-a0c0051e74b2
     alterId: "233"
     cipher: auto
-  - name: V2_Las Vegas
+    #
+  - name: V2_LOS ANGELES
     type: vmess
-    server: 198.98.53.164
+    server: 107.179.13.161
     port: "30725"
-    uuid: bd54b2c0-aaa2-336b-9b05-21d6b47fe598
+    uuid: f1ed3177-2130-3a82-8a52-af749404a1c3
     alterId: "4"
     cipher: auto
+  #- name: V2_Las Vegas
+    #type: vmess
+    #server: 198.98.53.164
+    #port: "30725"
+    #uuid: bd54b2c0-aaa2-336b-9b05-21d6b47fe598
+    #alterId: "4"
+    #cipher: auto
 Proxy Group:
   - name: MY_PROXY
     proxies:
-      - V2_LA
-      - V2_SEATTLE
-      - V2_Las Vegas
+      #- V2_LA
+      #- V2_SEATTLE
+      #- V2_Las Vegas
+       - V2_SAN JOSE
+       - V2_LOS ANGELES
     type: select
   - name: Hijacking
     proxies:
