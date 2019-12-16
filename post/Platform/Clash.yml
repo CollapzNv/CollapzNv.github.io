@@ -52,7 +52,7 @@ Proxy:
     #
   - name: V2_LOS ANGELES
     type: vmess
-    server: 107.179.13.161
+    server: 157.52.168.7
     port: "30725"
     uuid: f1ed3177-2130-3a82-8a52-af749404a1c3
     alterId: "4"
