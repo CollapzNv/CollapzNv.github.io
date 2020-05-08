@@ -42,15 +42,15 @@ Proxy:
     #ws-path: /
     
     #SEATTLE 已支持桌面端CLASH
-#   - name: V2_SAN JOSE
-#     type: vmess
-#     server: 35.235.87.33
-#     port: "43751"
-#     uuid: f1ac8566-3cd1-4b03-af79-a0c0051e74b2
-#     alterId: "233"
-#     cipher: auto
+  # - name: V2_SAN JOSE
+  #   type: vmess
+  #   server: 35.235.87.33
+  #   port: "43751"
+  #   uuid: f1ac8566-3cd1-4b03-af79-a0c0051e74b2
+  #   alterId: "233"
+  #   cipher: auto
     #
-   - name: V2_LOS ANGELES
+  - name: V2_LOS ANGELES
     type: vmess
     server: 107.179.13.50
     port: "60125"
