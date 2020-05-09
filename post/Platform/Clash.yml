@@ -50,13 +50,18 @@ Proxy:
   #   alterId: "233"
   #   cipher: auto
     #
-  - name: V2_LOS ANGELES
-    type: vmess
-    server: 107.179.13.50
-    port: "60125"
-    uuid: f1ed3177-2130-3a82-8a52-af749404a1c3
-    alterId: "65"
-    cipher: auto
+  # - name: V2_LOS ANGELES
+  #   type: vmess
+  #   server: 107.179.13.50
+  #   port: "60125"
+  #   uuid: f1ed3177-2130-3a82-8a52-af749404a1c3
+  #   alterId: "65"
+  #   cipher: auto
+  - name: Trojan Los Angeles
+    type: trojan
+    server: 3welkin3.top
+    port: 443
+    password: 0X_X0*P!
   - name: Trojan Osaka
     type: trojan
     server: osaka-a.furrylicker.buzz
@@ -81,7 +86,8 @@ Proxy Group:
       #- V2_SEATTLE
       #- V2_Las Vegas
       #- V2_SAN JOSE
-       - V2_LOS ANGELES
+      #- V2_LOS ANGELES
+       - Trojan Los Angeles
        - Trojan Carolina
        - Trojan Osaka
     type: select
