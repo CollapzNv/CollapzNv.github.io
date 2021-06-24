@@ -42,18 +42,18 @@ proxies:
     server: 3welkin3.top
     port: 443
     password: 0X_X0*P!
-  - name: Trojan Carolina
+  - name: Trojan Korea
     type: trojan
-    server: carolina-b.furrylicker.buzz
+    server: furrylicker.xyz
     port: 443
-    password: x(d,pY$d
+    password: 2-Yz*3z0
 proxy-groups:
   - name: MY_PROXY
     type: select
     proxies:
       - Trojan Osaka
       - Trojan Los Angeles
-      - Trojan Carolina
+      - Trojan Korea
 rules:
   - DOMAIN-SUFFIX,youtube.com,MY_PROXY
   - DOMAIN-SUFFIX,google.com,MY_PROXY
