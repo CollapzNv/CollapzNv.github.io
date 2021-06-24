@@ -67,11 +67,11 @@ Proxy:
     server: osaka-a.furrylicker.buzz
     port: 443
     password: 8*d@@J-3
-  - name: Trojan Carolina
+  - name: Trojan Korea
     type: trojan
-    server: carolina-b.furrylicker.buzz
+    server: furrylicker.xyz
     port: 443
-    password: x(d,pY$d
+    password: 2-Yz*3z0
   #- name: V2_Las Vegas
     #type: vmess
     #server: 198.98.53.164
@@ -88,7 +88,7 @@ Proxy Group:
       #- V2_SAN JOSE
       #- V2_LOS ANGELES
        - Trojan Los Angeles
-       - Trojan Carolina
+       - Trojan Korea
        - Trojan Osaka
     type: select
   - name: Hijacking
