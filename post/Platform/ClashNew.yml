@@ -47,6 +47,13 @@ proxies:
     server: furrylicker.xyz
     port: 443
     password: 2-Yz*3z0
+  - name: V2_LA
+    type: vmess
+    server: 3welkin3.top
+    port: "48019"
+    uuid: 37380606-038a-4bf0-ff2f-0e147f181d96
+    alterId: "0"
+    cipher: none
 proxy-groups:
   - name: MY_PROXY
     type: select
@@ -54,6 +61,7 @@ proxy-groups:
       - Trojan Osaka
       - Trojan Los Angeles
       - Trojan Korea
+      - V2_LA
 rules:
   - DOMAIN-SUFFIX,youtube.com,MY_PROXY
   - DOMAIN-SUFFIX,google.com,MY_PROXY
@@ -370,6 +378,11 @@ rules:
   # Telegram
   - DOMAIN-SUFFIX,telegra.ph,MY_PROXY
   - DOMAIN-SUFFIX,telegram.org,MY_PROXY
+  
+  # Discord
+  - DOMAIN-SUFFIX,discord.gg,MY_PROXY
+  - DOMAIN-SUFFIX,discordapp.com,MY_PROXY
+  - DOMAIN-SUFFIX,discordapp.net,MY_PROXY
 
   # Porhub
   - DOMAIN-SUFFIX,pornhub.com,MY_PROXY
