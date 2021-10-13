@@ -54,6 +54,7 @@ proxies:
     uuid: 37380606-038a-4bf0-ff2f-0e147f181d96
     alterId: "0"
     cipher: none
+    tls: true
 proxy-groups:
   - name: MY_PROXY
     type: select
