@@ -46,7 +46,7 @@ proxies:
     type: trojan
     server: furrylicker.xyz
     port: 443
-    password: 2-Yz*3z0
+    password: c35719a2c0
   - name: V2_LA
     type: vmess
     server: 3welkin3.top
