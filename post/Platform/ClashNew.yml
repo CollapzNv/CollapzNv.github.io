@@ -39,9 +39,15 @@ proxies:
     password: 8*d@@J-3
   - name: Trojan Los Angeles
     type: trojan
-    server: 3welkin3.top
+    server: 104.128.228.172
     port: 443
-    password: )-3_E-(!
+    udp: true
+    sni: 104.128.228.172.nip.io
+    password: eL_3d#-E5
+    alpn:
+      - h2
+      - http/1.1
+    skip-cert-verify: false
   - name: Trojan Korea
     type: trojan
     server: furrylicker.xyz
