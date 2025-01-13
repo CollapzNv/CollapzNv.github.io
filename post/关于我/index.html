@@ -35,7 +35,9 @@ CollapzNv(http://3welkin3.cn)
     <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
 
+    <!-- valine -->
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
 
 
     <!--[if IE 8]>
@@ -177,7 +179,26 @@ CollapzNv(http://3welkin3.cn)
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      
+      <!--
+sakura-widget插件
+
+<link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.css"
+    />
+    <div id="sakana-widget" style="position: fixed; right: 0px; bottom: 2px; z-index: 9999;"></div>
+    <script>
+      function initSakanaWidget() {
+        new SakanaWidget().mount('#sakana-widget');
+      }
+    </script>
+    <script
+      async
+      onload="initSakanaWidget()"
+      src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"
+    ></script>
+    -->
+
 <section id="intro">
     <div class="container">
         <div class="row col-md-offset-2">
@@ -230,11 +251,11 @@ CollapzNv(http://3welkin3.cn)
     
 </nav>
 
-
+        <br>
         <div class="col-md-8 col-md-offset-2 col-sm-24">
             
 
-
+<div id="vcomments"></div>
 
 
 <script type="text/javascript">
@@ -243,13 +264,17 @@ CollapzNv(http://3welkin3.cn)
         el: '#vcomments',
         appId: 'OB10a1mBb3NsM8uQqFBnLO2g-gzGzoHsz',
         appKey: 'zEWwzvkiS3gApgf7SP0KR8Ga',
-        notify:false,
-        verify:false,
+        path: window.location.pathname,
+        //notify:false,
+        //verify:false,
         avatar:'monsterid',
         placeholder: 'write something down here :)',
-        visitor: true,
+        //meta: 'nick,mail',
+        visitor: 'true',
+        recordIP: 'true',
         pageSize: 10,
-        lang: 'en',//'zh-cn'
+        lang: 'en',
+        //requiredFields: 'nick,mail',
         serverURLs: 'https://ob10a1mb.lc-cn-n1-shared.com',
         });
 </script>
@@ -763,5 +788,5 @@ $('#intro').find('img').each(function(){
 
       
       </div>      
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</body>
 </html>
