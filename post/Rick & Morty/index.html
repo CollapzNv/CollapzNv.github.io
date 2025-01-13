@@ -35,6 +35,8 @@ CollapzNv(http://3welkin3.cn)
     <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
     
 
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
 
     <!--[if IE 8]>
     <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
@@ -126,8 +128,6 @@ CollapzNv(http://3welkin3.cn)
     </div>
     
     <!-- ============================ END Off-canvas navigation =========================== -->
-
-
 
 
     <!-- ============================ #sb-site Main Page Wrapper =========================== -->
@@ -222,56 +222,34 @@ CollapzNv(http://3welkin3.cn)
     
 </nav>
 
-        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
-  /**
-   * 搜狐畅言
-   */
 
-  /*
-  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+        <div class="col-md-8 col-md-offset-2 col-sm-24">
+            
 
-  window.onload = function () {
-    (function () {
-      var appid = 'cytXXXX';
-      var conf = 'prod_xxxxxxxxxxxxxxxxx';
-      var width = window.innerWidth || document.documentElement.clientWidth;
-      var loadJs = function (d, a, id) {
-        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-        var b = document.createElement("script");
-        b.setAttribute("type", "text/javascript");
-        b.setAttribute("charset", "UTF-8");
-        b.setAttribute("src", d);
-        if (id) {
-          b.setAttribute("id", id);
-        }
-        if (typeof a === "function") {
-          if (window.attachEvent) {
-            b.onreadystatechange = function () {
-              var e = b.readyState;
-              if (e === "loaded" || e === "complete") {
-                b.onreadystatechange = null;
-                a()
-              }
-            }
-          } else {
-            b.onload = a
-          }
-        }
-        c.appendChild(b)
-      };
 
-      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
-        window.changyan.api.config({
-          appid: appid,
-          conf: conf
-        })
-      });
-    })();
-  }
-  */
 
+
+<script type="text/javascript">
+    new Valine({
+        // 请使用你自己的设置
+        el: '#vcomments',
+        appId: 'OB10a1mBb3NsM8uQqFBnLO2g-gzGzoHsz',
+        appKey: 'zEWwzvkiS3gApgf7SP0KR8Ga',
+        notify:false,
+        verify:false,
+        avatar:'monsterid',
+        placeholder: 'write something down here :)',
+        visitor: true,
+        pageSize: 10,
+        lang: 'en',//'zh-cn'
+        serverURLs: 'https://ob10a1mb.lc-cn-n1-shared.com',
+        });
 </script>
-</div>
+
+
+        </div>
+
+
     </div>
 </section>
 
